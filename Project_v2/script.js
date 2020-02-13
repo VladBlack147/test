@@ -3,18 +3,25 @@
 let money,
   time,
   expens,
-  moneyExpens,
+  answer,
   everyDay;
 
-money = prompt("Ваш бюджет на месяц?");
-time = prompt("Введите дату в формате YYYY-MM-DD");
+money = prompt(`Ваш бюджет на месяц?`);
+time = prompt(`Введите дату в формате YYYY-MM-DD`);
+expens = prompt(`Введите обязательную статью расходов в этом месяце`);
+answer = prompt(`“Во сколько обойдется?”`);
+
 
 let appData = {
   budjet: money,
   timeData: time,
-  expenses: {},
+  expenses: {
+    expens : answer
+  },
   optionalExpenses: {},
   income: [],
   savings: false
 };
 
+everyDay = money/30;
+alert(everyDay);
