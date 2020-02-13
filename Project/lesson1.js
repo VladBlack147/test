@@ -1,27 +1,23 @@
 'use strict';
 
-let money,
-  time,
-  expens,
-  answer,
-  everyDay;
-
-money = prompt(`Ваш бюджет на месяц?`, `40000`);
-time = prompt(`Введите дату в формате YYYY-MM-DD`, `2020 30 01`);
-expens = prompt(`Введите обязательную статью расходов в этом месяце`, `T`);
-answer = prompt(`Во сколько обойдется?`, `1000`);
-
+let money = prompt(`Ваш бюджет на месяц?`, ``),
+  time = prompt(`Введите дату в формате YYYY-MM-DD`, ``);
 
 let appData = {
   budjet: money,
-  timeData: time,
-  expenses: {
-    expens : answer
-  },
+  expenses: {},
   optionalExpenses: {},
   income: [],
+  timeData: time,
   savings: false
 };
 
-everyDay = money/30;
-alert(everyDay);
+let a1 = prompt(`Введите обязательную статью расходов в этом месце`,''),
+    a2 = prompt(`Во сколько обойдется?`,``),
+    a3 = prompt(`Введите обязательную статью расходов в этом месце`,``),
+    a4 = prompt(`Во сколько обойдется?`,``);
+
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
+
+alert(appData.budjet / 30);
