@@ -12,12 +12,11 @@ let appData = {
   savings: false
 };
 
-let a1 = prompt(`Введите обязательную статью расходов в этом месце`,''),
-    a2 = prompt(`Во сколько обойдется?`,``),
-    a3 = prompt(`Введите обязательную статью расходов в этом месце`,``),
-    a4 = prompt(`Во сколько обойдется?`,``);
+for (let i = 0; i < 2; i++) {
 
-appData.expenses.a1 = a2;
-appData.expenses.a3 = a4;
+  let a = prompt(`Введите обязательную статью расходов в этом месце`, ''),
+    b = prompt(`Во сколько обойдется?`, ``);
+  appData.expenses[a] = b;
+}
 
 alert(appData.budjet / 30);
